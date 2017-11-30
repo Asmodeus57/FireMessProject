@@ -67,10 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (currentUser == null){
-            /*Intent startPageIntent = new Intent(MainActivity.this, StartPageActivity.class);
-            startPageIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(startPageIntent);
-            finish();*/
 
             LogOutUser();
         }
