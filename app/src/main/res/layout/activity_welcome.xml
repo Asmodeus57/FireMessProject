@@ -5,7 +5,7 @@
     android:id="@+id/welcome_pic"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/welcome_page"
     android:visibility="visible"
     tools:context="com.firebase.firemess.WelcomeActivity">
 

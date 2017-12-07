@@ -111,10 +111,9 @@ public class ChatsFragment extends Fragment {
 
                         final String userName = dataSnapshot.child("user_name").getValue().toString();
                         String thumbImage = dataSnapshot.child("user_thumb_image").getValue().toString();
-
-
-                        //Status, zmienić na LastMessage
                         String userStatus = dataSnapshot.child("user_status").getValue().toString();
+                        //Status, zmienić na LastMessage
+
 
                         if(dataSnapshot.hasChild("online")){
 

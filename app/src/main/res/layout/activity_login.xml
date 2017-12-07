@@ -15,31 +15,62 @@
         android:id="@+id/login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
-        android:hint="Email"
         android:inputType="textEmailAddress"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@color/colorAccent"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/login_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/login_email"
-        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
-        android:hint="Password"
         android:inputType="textMultiLine|textPassword"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@color/colorAccent"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:text="SING IN"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_email"
+        android:layout_alignStart="@+id/login_email"
+        android:text="Email"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/login_email"
+        android:layout_below="@+id/login_email"
+        android:text="Password"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 </RelativeLayout>

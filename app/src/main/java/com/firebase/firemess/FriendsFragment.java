@@ -32,8 +32,6 @@ import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -71,6 +69,7 @@ public class FriendsFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         online_user_id = mAuth.getCurrentUser().getUid();
+
         FriendsRef = FirebaseDatabase.getInstance().getReference().child("Friends").child(online_user_id);
         FriendsRef.keepSynced(true);
         UserRef = FirebaseDatabase.getInstance().getReference().child("Users");

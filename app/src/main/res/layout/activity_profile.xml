@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorMessage1"
     tools:context="com.firebase.firemess.ProfileActivity">
 
 
@@ -12,6 +12,7 @@
         android:id="@+id/default_visit_profile_pic"
         android:layout_width="match_parent"
         android:layout_height="280dp"
+        android:layout_margin="5dp"
         android:src="@drawable/default_profile" />
 
     <TextView
@@ -55,7 +56,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/visit_addfriend_button"
         android:layout_marginBottom="14dp"
-        android:text="remove from friends"
+        android:text="Decline friend request"
         android:textSize="17dp" />
 
 </RelativeLayout>
