@@ -1,5 +1,7 @@
 package com.firebase.firemess;
 
+import java.text.SimpleDateFormat;
+
 /**
  * Created by Android on 27.11.2017.
  */
@@ -10,6 +12,9 @@ public class Messages {
     private long time;
     private boolean seen;
     private String from;
+
+    //private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+
 
 
 
@@ -39,9 +44,7 @@ public class Messages {
         this.type = type;
     }
 
-    public long getTime() {
-        return time;
-    }
+    public long getTime() {return time;}
 
     public void setTime(long time) {
         this.time = time;
@@ -54,9 +57,8 @@ public class Messages {
     public void setSeen(boolean seen) {
         this.seen = seen;
     }
-    public String getFrom() {
-        return from;
-    }
+
+    public String getFrom() {return from;}
 
     public void setFrom(String from) {
         this.from = from;

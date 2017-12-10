@@ -27,7 +27,7 @@
         android:padding="5dp">
 
         <ImageButton
-            android:id="@+id/select_image"
+            android:id="@+id/select_message_image"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:padding="10dp"

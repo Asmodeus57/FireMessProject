@@ -39,6 +39,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'id.zelory:compressor:2.1.0'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
 
 
     testImplementation 'junit:junit:4.12'
