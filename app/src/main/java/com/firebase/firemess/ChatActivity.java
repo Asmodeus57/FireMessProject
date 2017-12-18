@@ -161,9 +161,9 @@ public class ChatActivity extends AppCompatActivity {
                             userLastSeen.setText("Online");
                         }else{
 
-                            LastSeenTime getTime = new LastSeenTime();
+                            //LastSeenTime getTime = new LastSeenTime();
                             long last_seen = Long.parseLong(online);
-                            String lastSeenDisplayTime = getTime.getTimeAgo(last_seen, getApplicationContext()).toString();
+                            String lastSeenDisplayTime = LastSeenTime.getTimeAgo(last_seen, getApplicationContext());
 
                             userLastSeen.setText(lastSeenDisplayTime);
                         }
@@ -312,11 +312,11 @@ public class ChatActivity extends AppCompatActivity {
                     "Please write your message.", Toast.LENGTH_SHORT).show();
         }else{
 
-            String message_sender_ref = "Messages/" + messageSenderId + "/" + messageReceiverId;
-            String message_receiver_ref = "Messages/" + messageReceiverId + "/" + messageSenderId;
+            String message_sender_ref = "Messages/" + mCurrentUserId + "/" + messageReceiverId;
+            String message_receiver_ref = "Messages/" + messageReceiverId + "/" + mCurrentUserId;
 
             DatabaseReference user_message_key = rootRef.child("Message")
-                    .child(messageSenderId).child(messageReceiverId).push();
+                    .child(mCurrentUserId).child(messageReceiverId).push();
 
             String message_push_id = user_message_key.getKey();
 
@@ -326,7 +326,7 @@ public class ChatActivity extends AppCompatActivity {
             messageTextBody.put("seen", false);
             messageTextBody.put("type", "text");
             messageTextBody.put("time", ServerValue.TIMESTAMP);
-            messageTextBody.put("from", messageReceiverId);
+            messageTextBody.put("from", mCurrentUserId);
 
             Map messageBodyDetails = new HashMap();
 

@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
@@ -90,6 +91,26 @@ public class AllUsersActivity extends AppCompatActivity {
 
                 Query allUsersQuery = allDatabaseUsersReference.child("Users").orderByChild("user_name").startAt(newText).endAt("~");
 
+                /*allUsersQuery.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.hasChildren())
+                        {
+                            for (DataSnapshot usersSnapshot : dataSnapshot.getChildren())
+                            {
+                                final AllUsers allUsers = usersSnapshot.getValue(AllUsers.class);
+                            }
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });*/
+
                 FirebaseRecyclerOptions<AllUsers> allUsersOptions =
                         new FirebaseRecyclerOptions.Builder<AllUsers>().setQuery(allUsersQuery, AllUsers.class).build();
                 mUsersAdapter = new FirebaseRecyclerAdapter<AllUsers, AllUsersViewHolder>(allUsersOptions) {
@@ -127,6 +148,7 @@ public class AllUsersActivity extends AppCompatActivity {
                     }
 
                 };
+
 
                 allUserList.setAdapter(mUsersAdapter);
 

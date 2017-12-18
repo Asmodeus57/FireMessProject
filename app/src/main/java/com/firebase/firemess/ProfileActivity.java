@@ -358,11 +358,8 @@ public class ProfileActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-
-
                         if(task.isSuccessful())
                         {
-
                             FriendsRequestRef.child(receiver_user_id).child(sender_user_id)
                                     .child("request_type").setValue("received")
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {

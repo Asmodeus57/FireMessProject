@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorPrimary">
 
 
@@ -29,9 +30,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/custom_profile_user_pic"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="335dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/default_profile" />
 </RelativeLayout>

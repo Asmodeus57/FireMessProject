@@ -13,6 +13,18 @@
         android:roundIcon="@mipmap/firemess"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+
+        </service>
+
+        
+        
+        
+        
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +53,12 @@
             android:name=".AllUsersActivity"
             android:parentActivityName=".MainActivity"/>
 
-        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".ProfileActivity">
+            <intent-filter>
+                <action android:name="com.firebase.firemess_TARGET_NOTIFICATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity android:name=".ChatActivity"
             android:parentActivityName=".MainActivity"/>
